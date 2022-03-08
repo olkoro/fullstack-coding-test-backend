@@ -10,16 +10,10 @@ plugins:
   - serverless-plugin-common-excludes
 
 package:
+  excludeDevDependencies: true
   individually: true
-  exclude:
+  include:
     - node_modules/**
-    - .git/**
-    - src/**
-    - test/**
-    - e2e/**
-    - nodemon.json
-    - README.md
-
 functions:
   index:
     handler: dist/index.handler
